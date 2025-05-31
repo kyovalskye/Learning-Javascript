@@ -1,2 +1,2 @@
 # Learning-Javascript
-This repository are just my journey to learning a Javascript :D
+Ignore this repository, This repository are just my journey to learning a Javascript :D
