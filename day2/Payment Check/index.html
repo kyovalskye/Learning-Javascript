@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="subsCheck" />
+    <label for="langganan">Langganan</label><br />
+
+    <input type="radio" name="payment" id="gopayBtn" />
+    <label for="gopayBtn">Gopay</label><br />
+    <input type="radio" name="payment" id="shopeeBtn" />
+    <label for="shopeeBtn">Shopeepay</label><br />
+    <input type="radio" name="payment" id="qrisBtn" />
+    <label for="qrisBtn">QRIS</label><br /><br />
+
+    <input type="submit" id="mySubmit" />
+    <p id="subResult"></p>
+    <p id="payResult"></p>
+
+    <script>
+      const subsCheck = document.getElementById("subsCheck");
+      const gopayBtn = document.getElementById("gopayBtn");
+      const shopeeBtn = document.getElementById("shopeeBtn");
+      const qrisBtn = document.getElementById("qrisBtn");
+      const mySubmit = document.getElementById("mySubmit");
+      const subsResult = document.getElementById("subResult");
+      const payResult = document.getElementById("payResult");
+
+      mySubmit.onclick = function () {
+        if (subsCheck.checked) {
+          subsResult.innerText = "Kamu telah sabrek";
+        } else {
+          subsResult.innerText = "Kamu belum sabrek";
+        }
+
+        if (gopayBtn.checked) {
+          payResult.innerText = "Kamu membayar dengan gopay";
+        } else if (shopeeBtn.checked) {
+          payResult.innerText = "Kamu membayar dengan shopee pay";
+        } else if (qrisBtn.checked) {
+          payResult.innerText = "Kamu membayar dengan QRIS";
+        } else {
+          payResult.innerText = "Kamu belum bayar";
+        }
+      };
+    </script>
+  </body>
+</html>
